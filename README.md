@@ -1,25 +1,25 @@
-#Projeto Spring Web API - Bootcamp SANTANDER - DIO
+# Projeto Spring Web API - Bootcamp SANTANDER - DIO
 
-###Diagrama de Classes
+## Diagrama de Classes
 
 ```mermaid
 classDiagram
-    class Usuario {
+    class User {
         -String name
-        -Conta account
-        -Cartao card
-        -Lista<Feature> features
-        -Lista<News> news
+        -Account account
+        -Feature[] features
+        -Card card
+        -News[] news
     }
     
-    class Conta {
+    class Account {
         -String number
         -String agency
         -float balance
         -float limit
     }
     
-    class Cartao {
+    class Card {
         -String number
         -float limit
     }
@@ -33,4 +33,10 @@ classDiagram
         -String icon
         -String description
     }
+
+    User --> Account
+    User -- Card
+    User --> Feature
+    User --> News
+
 ```
