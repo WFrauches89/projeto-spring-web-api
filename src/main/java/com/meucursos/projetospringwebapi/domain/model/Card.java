@@ -26,7 +26,7 @@ public class Card {
     }
 
     public String getNumber() {
-        return number;
+        return this.number;
     }
 
     public void setNumber(String number) {
@@ -40,4 +40,5 @@ public class Card {
     public void setLimit(BigDecimal limit) {
         this.limit = limit;
     }
+
 }
